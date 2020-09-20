@@ -31,13 +31,16 @@ console.log(a*b)
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+let yourAge = 28;
+yourAge += 6;
+console.log(yourAge);
 
 
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
-//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal)
+// and returns the number of pounds of raw food to feed in a day.
 
 //feeding requirements
 // adult dogs at least 1 year 
