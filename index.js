@@ -120,14 +120,18 @@ compare(userChoice, computerChoice);
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+let kilometers = prompt("Please enter kilometers:");
+let miles = kilometers / 1.6;
+console.log(miles + " Miles");
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 
-
+let feet = prompt("Please enter feet:");
+let centimeters = feet * 30.48;
+console.log(centimeters + " centimeters");
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -136,7 +140,34 @@ compare(userChoice, computerChoice);
 // the function should take a starting number as an argument and count down - at each iteration it should log 
 //(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around 
 //(number left over) bottles of soda on the wall`
-  
+function annoyingSong(){
+    let bottles;
+    for (counter = 99; counter >= 1; counter = counter - 1) 
+    {
+        if (counter == 1) 
+        {
+            bottles = 'bottle';
+        } else 
+        {
+            bottles = 'bottles';
+        }
+        console.log(counter+" "+bottles+" of beer on the wall.");
+        if (counter < 99) 
+        {
+            console.log("");
+            console.log(counter+" "+bottles+" of beer on the wall.");
+        }
+        console.log(counter+" "+bottles+" of beer.");
+        console.log("Take one down.");
+        console.log("Pass it around.");
+        if (counter == 1) 
+        {
+            console.log("No bottles of beer on the wall.");
+           
+        }
+    }
+    }
+    console.log(annoyingSong());
 
 
 
@@ -155,7 +186,8 @@ compare(userChoice, computerChoice);
   
 
 /************************************************************** Stretch **************************************************************/
-//Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
+//Create a function that counts the number of vowels within a string. It should handle both capitalized
+// and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
