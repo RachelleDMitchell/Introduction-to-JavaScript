@@ -12,7 +12,14 @@ console.log('Get to voting!')
 //Task b: declare a variable and then use a conditional to change the value of that variable based on 
 //the value assigned to a second variable (no function required)
 
+let x = 1;
+let y = 2;
 
+if (x < y)
+{
+    x = y
+} 
+console.log(x)
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required)
