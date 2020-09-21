@@ -3,10 +3,19 @@
 
 let votingAge = 19
 if(votingAge > 18) {
-console.log('Get to voting!')
+console.log('True')
 } else {
   console.log('Not old enough')
 }
+/* I think it should be the one below, because technically you are old enought to vote when 18 and the original one 
+doesn't include 18.
+let votingAge = 18
+if(votingAge >= 18) {
+console.log('True')
+} else {
+  console.log('Not old enough')
+}
+
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on 
