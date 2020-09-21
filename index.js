@@ -7,7 +7,9 @@ console.log('True')
 } else {
   console.log('Not old enough')
 }
-/* I think it should be the one below, because technically you are old enought to vote when 18 and the original one 
+/* 
+I think it should be the one below, because technically you are old 
+enough to vote when 18 and the original one 
 doesn't include 18.
 let votingAge = 18
 if(votingAge >= 18) {
@@ -15,7 +17,7 @@ console.log('True')
 } else {
   console.log('Not old enough')
 }
-
+*/
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on 
@@ -197,7 +199,27 @@ function annoyingSong(){
 //60s should be D 
 //and anything below 60 should be F
   
-
+let grade = Math.floor(Math.random() * 100);
+ console.log(grade)
+if (grade >= 90) {
+  console.log('A');
+}
+else if 
+  (grade >= 80)
+  {console.log('B');
+}
+ else if 
+  (grade >= 70)
+  {console.log('C');
+}
+ else if 
+  (grade >= 60)
+  {console.log('D');
+}
+ else if 
+  (grade <= 59)
+ { console.log('F')
+}
   
   
 
