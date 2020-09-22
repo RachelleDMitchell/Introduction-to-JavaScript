@@ -75,6 +75,27 @@ console.log(yourAge);
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your
 // calculations are correct your result should be 0.44999999999999996
+function howMuchFoodToEat(){
+    let weight = prompt("How many pounds does your dog weigh?");
+    let age = prompt("How old is your dog in whole number if 1 or older. If you have a puppy, use the following scale. .1 for 2 months, .2 for 3 months, .3 for 4 months, .4 for 5 months, .5 for 6 months, .6 for 7 months, .7 for 8 months, .8 for 9 months, .9 for 10 months and .95 for 11 months.")
+    
+    if (weight <= 5 && age >= 1){
+        console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.05 + ' pounds of food each day!')
+    } else if (weight <= 10 && age >= 1){
+          console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.04 + ' pounds of food each day!')
+    } else if (weight <= 15 && age >= 1){
+         console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.03 + ' pounds of food each day!')
+    }  else if (weight <=5 && age <= .3){
+      console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.10 + ' pounds of food each day!')
+    }  else if (weight <=5 && age <= .6){
+      console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.05 + ' pounds of food each day!')
+    }
+    else if (weight <=5 && age <= .95){
+      console.log('Your dog weighs ' + weight + ' pounds! ' + 'He should eat ' + weight*.04 + ' pounds of food each day!')
+    }
+    }
+    console.log(howMuchFoodToEat())
+    
   
 
 
@@ -88,50 +109,52 @@ console.log(yourAge);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-let userChoice = prompt("Do you choose rock, paper or scissors?");
-let computerChoice = Math.random();
-if (computerChoice < 0.34) {
-    computerChoice = "rock";
-} else if(computerChoice <= 0.67) {
-    computerChoice = "paper";
-} else {
-    computerChoice = "scissors";
+let you = prompt("Do you choose rock, paper or scissors?");
+let computer = Math.round(Math.random()*3); 
+if (computer === 1){
+    computer = "rock";
+    console.log('Computer chose ' + computer)
+}else if(computer === 2){
+    computer = "paper";
+    console.log('Computer chose ' + computer)
 }
+else{
+    computer = "scissors";
+   console.log('Computer chose ' + computer)
+}
+let compare = function(you,computer){
+    if(you===computer){
 
-let compare = function(choice1, choice2) {
-    if(choice1 === choice2) {
-    return "The result is a tie!";
-}
-if(choice1 === "rock") {
-    if(choice2 === "scissors") {
-        return "rock wins";
-    } else {
-        return "paper wins";
+        console.log("The result is a tie!")
     }
-}
-
-if(choice1 === "paper") {
-    if(choice2 === "rock") {
-        return "paper wins";
-    } else {
-        if(choice2 === "scissors") {
-            return "scissors wins";
-    }
-}
-if(choice1 === "scissors") {
-    if(choice2 === "rock") {
-        return "rock wins";
-    } else {
-        if(choice2 === "paper") {
-            return "scissors wins";
+    if(you==="rock"){
+        if(computer==="scissors"){
+            console.log("rock wins")
+        }
+        else{
+            console.log("paper wins")
         }
     }
-}
-}
+    if(you==="paper"){
+        if(computer==="rock"){
+            console.log("paper wins")
+        }
+        else{
+            console.log("scissors wins")
+        }
+    }
+    if(you==="scissors"){
+        if(computer==="rock"){
+            console.log("rock wins")
+        }
+        else{
+            console.log("scissors wins")
+        }
+    }
 };
-console.log("User Choice: " + userChoice);
-console.log("Computer Choice: " + computerChoice);
-compare(userChoice, computerChoice);
+compare(you,computer);
+
+
   
 
 /************************************************************** Task 5 **************************************************************/
