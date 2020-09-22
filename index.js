@@ -264,49 +264,49 @@ else if
 
 
 
+let player1 = prompt('Choose rock, paper, or scissors')
+let player2 = Math.floor(Math.random()*3);
 
-
-let you = prompt("Do you choose rock, paper or scissors?");
-let computer = Math.round(Math.random()*3); 
-if (computer === 1){
-    computer = "rock";
-    console.log('Computer chose ' + computer)
-}else if(computer === 2){
-    computer = "paper";
-    console.log('Computer chose ' + computer)
+if (player1 === 0){
+  player1 = 'rock'
+} else if (player1 === 1){
+  player1 = 'paper'
+} else if (player1 === 2){
+  player1 = 'scissors'
 }
-else{
-    computer = "scissors";
-   console.log('Computer chose ' + computer)
-}
-let compare = function(you,computer){
-    if(you===computer){
 
-        console.log("The result is a tie!")
-    }
-    if(you==="rock"){
-        if(computer==="scissors"){
-            console.log("rock wins")
-        }
-        else{
-            console.log("paper wins")
-        }
-    }
-    if(you==="paper"){
-        if(computer==="rock"){
-            console.log("paper wins")
-        }
-        else{
-            console.log("scissors wins")
-        }
-    }
-    if(you==="scissors"){
-        if(computer==="rock"){
-            console.log("rock wins")
-        }
-        else{
-            console.log("scissors wins")
-        }
-    }
-};
-compare(you,computer);
+if (player2 === 0){
+  player2 = 'rock'
+} else if (player2 === 1){
+  player2 = 'paper'
+} else if (player2 === 2){
+  player2 = 'scissors'
+}
+if (player1 === player2){
+  console.log('its a tie')
+} else if (player1 === 'rock' && player2 === 'paper'){
+  console.log('paper wins')
+} else if (player1 === 'rock' && player2 === 'scissors'){
+  console.log('rock wins')
+} else if (player2 === 'rock' && player1 === 'paper'){
+  console.log('paper wins')
+} else if (player2 === 'rock' && player1 === 'scissors'){
+  console.log('rock wins')
+} else if (player1 === 'paper' && player2 === 'rock'){
+  console.log('paper wins')
+} else if (player1 === 'paper' && player2 === 'scissors'){
+  console.log('scissors wins')
+} else if (player2 === 'paper' && player1 === 'rock'){
+  console.log('paper wins')
+} else if (player2 === 'paper' && player1 === 'scissors'){
+  console.log('scissors wins')
+} else if (player1 === 'scissors' && player2 === 'paper'){
+  console.log('scissors wins')
+} else if (player1 === 'scissors' && player2 === 'rock'){
+  console.log('rock wins')
+} else if (player2 === 'scissors' && player1 === 'paper'){
+  console.log('scissors wins')
+} else if (player2 === 'scissors' && player1 === 'rock'){
+  console.log('rock wins')
+}
+console.log('Player 1 chose ' + player1, 'Player 2 chose ' + player2)
